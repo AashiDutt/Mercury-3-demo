@@ -1,0 +1,198 @@
+{
+  "nonstream_low": {
+    "elapsed_s": 4.369024542160332,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 2467,
+      "prompt_tokens": 815,
+      "total_tokens": 3282,
+      "completion_tokens_details": {
+        "reasoning_tokens": 1889
+      },
+      "prompt_tokens_details": {
+        "cached_tokens": 517
+      }
+    },
+    "message_keys": [
+      "content",
+      "reasoning_details",
+      "role",
+      "tool_call_id",
+      "tool_calls"
+    ],
+    "content_len": 2660,
+    "content_head": "Here is my analysis of your case, based only on the evidence in your file.\n\n**1. Most likely explanation**  \nThe first charge of $129 (made at 19:41) is your actual order, ORD-1048. It is marked as **completed**, and your headphones have shipped with one tracking number. The second charge of $129 (m",
+    "content_tail": "s by then, we will escalate to the payments team.  \n3. **Request the authorization expiry date from the payment processor** so we can give you a specific date the hold should disappear. Per policy, we cannot issue a refund against a charge that has not settled, so this is the correct immediate step.",
+    "non_content_message_fields": {
+      "role": "assistant",
+      "reasoning_details": "[{'type': 'reasoning.encrypted', 'data': 'mrt1_v1__IxgeoZJ2aOL6ZUlQYtbwnw-pw-99wv0HUJz066FtGGUuf3NEdof3Y6gK-qukII-reaDstW_9p0QMSGr', 'format': 'mercury-v1', 'index': 0}]"
+    }
+  },
+  "nonstream_high": {
+    "elapsed_s": 9.953180000185966,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 5312,
+      "prompt_tokens": 820,
+      "total_tokens": 6132,
+      "completion_tokens_details": {
+        "reasoning_tokens": 4749
+      },
+      "prompt_tokens_details": {
+        "cached_tokens": 684
+      }
+    },
+    "message_keys": [
+      "content",
+      "reasoning_details",
+      "role",
+      "tool_call_id",
+      "tool_calls"
+    ],
+    "content_len": 2531,
+    "content_head": "**1. Most likely explanation**\n\nThe second $129 charge is most likely a duplicate **pending authorization** from your checkout, not a second order. The case file shows only one order (ORD-1048), one pair of headphones, one shipment, and one tracking number. The payment log shows one completed $129 c",
+    "content_tail": "a follow-up for 3\u20135 business days to check whether the second charge has disappeared or settled.\n3. Request the authorization expiry date from the payment processor so you can give a more precise timeline. If the second charge has settled by the follow-up, escalate to the payments team for a refund.",
+    "non_content_message_fields": {
+      "role": "assistant",
+      "reasoning_details": "[{'type': 'reasoning.encrypted', 'data': 'mrt1_v1__DKkXgPP6MJlCytaSaQmqVGtQTw6VBzFfk7AAzfDm5QRJ1ULMzm8xtpTiJgpaTpF4FQdKgB4EVdm6fnA', 'format': 'mercury-v1', 'index': 0}]"
+    }
+  },
+  "diffusing": {
+    "chunk_count": 11,
+    "total_s": 2.3302704580128193,
+    "first_3": [
+      {
+        "i": 0,
+        "t_s": 1.7819967502728105,
+        "chunk": {
+          "id": "chatcmpl-2f53f511-691b-43ed-afe3-513b10f13fcf",
+          "choices": [
+            {
+              "delta": {
+                "content": "**1. Most",
+                "role": "assistant",
+                "tool_calls": null
+              },
+              "index": 0,
+              "finish_reason": null
+            }
+          ],
+          "created": 1793599742,
+          "model": "mercury-3",
+          "object": "chat.completion.chunk",
+          "reasoning_summary": null,
+          "diffusion_meta": {
+            "diffusion_content": true,
+            "diffusion_progress": 0.0
+          }
+        }
+      },
+      {
+        "i": 1,
+        "t_s": 1.782416958361864,
+        "chunk": {
+          "id": "chatcmpl-2f53f511-691b-43ed-afe3-513b10f13fcf",
+          "choices": [
+            {
+              "delta": {
+                "content": "*Sn2 Most",
+                "role": "assistant",
+                "tool_calls": null
+              },
+              "index": 0,
+              "finish_reason": null
+            }
+          ],
+          "created": 1793599742,
+          "model": "mercury-3",
+          "object": "chat.completion.chunk",
+          "reasoning_summary": null,
+          "diffusion_meta": {
+            "diffusion_content": true,
+            "diffusion_progress": 0.0
+          }
+        }
+      },
+      {
+        "i": 2,
+        "t_s": 1.7826969162561,
+        "chunk": {
+          "id": "chatcmpl-2f53f511-691b-43ed-afe3-513b10f13fcf",
+          "choices": [
+            {
+              "delta": {
+                "content": "**1. Moz! 4-;J!y exP@]7ation**  \nThe ?\"X~4d $129 charge is a pending caM6 gfBhorB:A|8on, not x =\"Ni)d reKo Yhm1eX. YodY &rder (ORD-1048) \\)e TTT6\\o |Ace, dL< uniW _,b rese?v7J and shipped, and 8Z] [ds?%ing _lWber was i[XM.d. The second au,\\lS1*cjion war 8Cver tfxe to an order: a sed8{8 unit was bsubYly reserved `p0W no or_I) ID and then releaseV *Jcj g| 4PHWk. Pending wOWDo}EOtZ}m)} !fAh 7re nevl. sp^9WuN` uE$#GOb disappear from",
+                "role": "assistant",
+                "tool_calls": null
+              },
+              "index": 0,
+              "finish_reason": null
+            }
+          ],
+          "created": 1793599742,
+          "model": "mercury-3",
+          "object": "chat.completion.chunk",
+          "reasoning_summary": null,
+          "diffusion_meta": {
+            "diffusion_content": true,
+            "diffusion_progress": 0.0
+          }
+        }
+      }
+    ],
+    "last_2": [
+      {
+        "i": 9,
+        "t_s": 2.3291304162703454,
+        "chunk": {
+          "id": "chatcmpl-2f53f511-691b-43ed-afe3-513b10f13fcf",
+          "choices": [
+            {
+              "delta": {
+                "content": null,
+                "role": "assistant",
+                "tool_calls": null,
+                "reasoning_details": [
+                  {
+                    "type": "reasoning.encrypted",
+                    "data": "mrt1_v1_LB9DIaptwZ28UR0MkePhlFOQlZ5mPSactMm_g0Nx2QcImi_QkZiPpEP_65TZ0hk88Q3W_FGxyZvWKcbm",
+                    "format": "mercury-v1",
+                    "index": 0
+                  }
+                ]
+              },
+              "index": 0,
+              "finish_reason": null
+            }
+          ],
+          "created": 1793599743,
+          "model": "mercury-3",
+          "object": "chat.completion.chunk",
+          "reasoning_summary": null
+        }
+      },
+      {
+        "i": 10,
+        "t_s": 2.3294117082841694,
+        "chunk": {
+          "id": "chatcmpl-2f53f511-691b-43ed-afe3-513b10f13fcf",
+          "choices": [
+            {
+              "delta": {
+                "content": null,
+                "role": null,
+                "tool_calls": null
+              },
+              "index": 0,
+              "finish_reason": "stop"
+            }
+          ],
+          "created": 1793599743,
+          "model": "mercury-3",
+          "object": "chat.completion.chunk",
+          "reasoning_summary": null
+        }
+      }
+    ]
+  }
+}

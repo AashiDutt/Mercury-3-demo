@@ -1,0 +1,48 @@
+[
+  {
+    "mode": "nonstream",
+    "effort": "low",
+    "max_completion_tokens": 1600,
+    "elapsed_s": 2.6568482504226267,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 964,
+      "prompt_tokens": 800,
+      "total_tokens": 1764,
+      "completion_tokens_details": {
+        "reasoning_tokens": 620
+      },
+      "prompt_tokens_details": {
+        "cached_tokens": 507
+      }
+    },
+    "completion_tokens": 964,
+    "effective_output_tokens_per_s": 362.83592781283454,
+    "text_chars": 1555,
+    "text": "1. **Most likely explanation**  \n   Your order went through once. The second $129 charge is a **pending authorization** that was never attached to an order. It should disappear from your card within 3\u20135 business days, so you won\u2019t be out $258.\n\n2. **Evidence supporting this**  \n   - The second payment record is marked **\"pending\"**, not \"completed.\"  \n   - The fulfillment log shows the second reservation at 19:42:47 had **no order ID attached**, and it was later released back to stock.  \n   - Support policy states a pending authorization can appear as a second charge and usually drops off in 3\u20135 business days.\n\n3. **Alternative explanations / what\u2019s uncertain**  \n   - **Both charges could settle** if the second authorization is captured \u2014 in that case, we\u2019d need to escalate to the payments team and refund one.  \n   - **The authorization expiry date is unknown**, so we can\u2019t predict the exact day it will vanish. We\u2019re also relying on the payment processor to release it as expected.\n\n4. **Next three actions (in priority order)**  \n   1. **Explain the pending authorization** to you and confirm we see one completed charge and one pending charge.  \n   2. **Set a follow-up for 5 business days** to verify the pending charge has disappeared.  \n   3. **Request the authorization expiry date from the payment processor** so we can give you a more precise timeline, and if both charges settle, escalate to the payments team.  \n\nWe won\u2019t issue a refund against a pending authorization, but we\u2019ll monitor it and make sure you\u2019re not double-charged.",
+    "trial": 0
+  },
+  {
+    "mode": "nonstream",
+    "effort": "high",
+    "max_completion_tokens": 1600,
+    "elapsed_s": 3.7681979998014867,
+    "finish_reason": "length",
+    "usage": {
+      "completion_tokens": 1539,
+      "prompt_tokens": 791,
+      "total_tokens": 2330,
+      "completion_tokens_details": {
+        "reasoning_tokens": 1539
+      },
+      "prompt_tokens_details": {
+        "cached_tokens": 659
+      }
+    },
+    "completion_tokens": 1539,
+    "effective_output_tokens_per_s": 408.41802901043854,
+    "text_chars": 0,
+    "text": "",
+    "trial": 0
+  }
+]

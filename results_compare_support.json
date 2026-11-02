@@ -1,0 +1,232 @@
+[
+  {
+    "mode": "nonstream",
+    "effort": "low",
+    "max_completion_tokens": 8192,
+    "elapsed_s": 4.992802459280938,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 2154,
+      "prompt_tokens": 822,
+      "total_tokens": 2976,
+      "completion_tokens_details": {
+        "reasoning_tokens": 1706
+      },
+      "prompt_tokens_details": {
+        "cached_tokens": 521
+      }
+    },
+    "completion_tokens": 2154,
+    "effective_output_tokens_per_s": 431.4210340919874,
+    "text_chars": 2039,
+    "text": "**1. Most likely explanation**\n\nYour order for the headphones went through successfully. The **first $129 charge** is the real, completed charge for your order. The **second $129 charge** is a temporary hold (a pending authorization) created by a system hiccup. This hold was not linked to any order, and our system released the duplicate item back to stock minutes later. Because it is only a hold, it should disappear from your statement within **3\u20135 business days** without you needing to do anything.\n\n**2. Three pieces of evidence supporting this**\n\n- Your order record shows a quantity of **1**, and you have only **one confirmation email and one tracking number**\u2014confirming only one purchase was made.\n- In our payment records, the first charge is marked **\"completed\"**, while the second charge is marked **\"pending\"** (meaning it has not been finalized).\n- Our fulfillment log shows the second item reservation at 19:42:47 had **\"no order id attached\"** and was released back to stock at 19:58:30\u2014confirming it was a duplicate, ghost attempt.\n\n**3. Alternative explanations and what is still uncertain**\n\n- **Alternative 1:** The second charge could settle (become permanent), which happened on your account on October 7. If that occurs, we will escalate to our payments team to issue a refund for the duplicate.\n- **Alternative 2:** Your bank might take slightly longer than 5 business days to drop the hold. We do not yet have the exact authorization expiry date from your bank, so the 3\u20135 day window is our standard estimate.\n\n**4. Next three actions for the agent (in priority order)**\n\n1. **Explain to you** exactly what I have confirmed above: your order is shipped, the first charge is valid, and the second is a temporary hold that should drop off.\n2. **Set a follow-up** for **5 business days** to verify that the pending charge has been removed from your statement.\n3. **Escalate to the payments team** immediately if the second charge settles before that follow-up, so they can issue a refund for the duplicate charge.",
+    "trial": 0
+  },
+  {
+    "mode": "nonstream",
+    "effort": "low",
+    "max_completion_tokens": 8192,
+    "elapsed_s": 3.141495707910508,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 1583,
+      "prompt_tokens": 791,
+      "total_tokens": 2374,
+      "completion_tokens_details": {
+        "reasoning_tokens": 1089
+      },
+      "prompt_tokens_details": {
+        "cached_tokens": 502
+      }
+    },
+    "completion_tokens": 1583,
+    "effective_output_tokens_per_s": 503.9000995652785,
+    "text_chars": 2351,
+    "text": "**1. Most likely explanation**\n\nYour second $129 charge is a pending authorization from a duplicate reservation, not a second completed purchase. One charge (entry 1) has settled and matches your shipped order ORD-1048. The second charge (entry 2) is still pending and was tied to a second unit that was reserved, then released back to stock without an order attached. Pending authorizations that are never captured usually disappear from your statement within 3\u20135 business days, so you should not be out $258 permanently.\n\n**2. Evidence supporting this**\n\n- **Payment records:** Entry 1 is status \"completed\" with authorization code A7X41K; entry 2 is status \"pending\" with authorization code B2M09T. Only one charge has actually settled.\n- **Fulfillment log:** At 19:42:47, a second unit was reserved with no order ID attached, then released back to stock at 19:58:30 \u2014 matching the timing of the second charge and showing it was never tied to a real order.\n- **Order record:** ORD-1048 has quantity 1, one tracking number, and shipped once. There is only one confirmed order, so two settled charges would be inconsistent with what was actually fulfilled.\n\n**3. Alternative explanations and uncertainty**\n\n- **Both charges could settle.** Your history shows a similar case on 2026-10-07 where both charges settled and a refund was issued for one. If the second authorization captures, we would need to escalate to the payments team per policy.\n- **The pending charge could be an error on the card issuer's side.** While less likely given the matching card number and timing, we cannot fully rule out a bank-side duplicate posting.\n\nWhat is still uncertain: whether the second authorization will drop off on its own or will settle. We cannot confirm that until it either disappears or captures.\n\n**4. Next actions for the agent, in priority order**\n\n1. **Explain the pending authorization to you** \u2014 confirm one charge is settled and one is pending, and that the pending one typically disappears in 3\u20135 business days if not captured.\n2. **Request the authorization expiry date from the payment processor** \u2014 so we can tell you the exact date the pending charge should drop off.\n3. **Set a follow-up for 3\u20135 business days** \u2014 if the second charge has settled by then, we will escalate to the payments team to arrange a refund for the duplicate charge.",
+    "trial": 1
+  },
+  {
+    "mode": "nonstream",
+    "effort": "low",
+    "max_completion_tokens": 8192,
+    "elapsed_s": 2.936148624867201,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 1312,
+      "prompt_tokens": 784,
+      "total_tokens": 2096,
+      "completion_tokens_details": {
+        "reasoning_tokens": 828
+      },
+      "prompt_tokens_details": {
+        "cached_tokens": 497
+      }
+    },
+    "completion_tokens": 1312,
+    "effective_output_tokens_per_s": 446.8438650851131,
+    "text_chars": 2381,
+    "text": "**1. Most likely explanation**\n\nThe second charge is a duplicate pending authorization from the same order attempt. Only one order (ORD-1048) exists, one item was shipped, and one tracking number was issued. The fulfillment log shows a second unit was reserved at 19:42:47 but released back to stock at 19:58:30 without ever being attached to an order. The second payment entry is still pending, which means it was never captured and should disappear from your statement within 3\u20135 business days.\n\n**2. Three pieces of evidence supporting this**\n\n- Payment record entry 2 shows $129 with status \"pending\" and a different authorization code (B2M09T) than the completed charge (A7X41K), indicating it was never finalized.\n- The fulfillment log records a second reservation at 19:42:47 with no order ID, followed by a release at 19:58:30 \u2014 confirming no second order was ever fulfilled.\n- The order record shows quantity of 1, one confirmation email, one tracking number, and status \"shipped,\" consistent with a single purchase.\n\n**3. Two alternative explanations and what is still uncertain**\n\n- *Alternative 1:* You may have accidentally triggered a second authorization (e.g., double-clicking the buy button), even if you only remember pressing once. The pending status and released inventory still point to no actual second order.\n- *Alternative 2:* A payment system glitch created a duplicate authorization. This is possible, but the evidence doesn't reveal a system error \u2014 it simply shows a duplicate pending charge.\n- *Still uncertain:* Whether the pending authorization will be automatically reversed or will settle. Also, your account history shows a similar two-charge incident on October 7 where both charges settled and a refund was issued; it's unclear if that earlier incident is related to this one.\n\n**4. Next three actions for the agent, in priority order**\n\n1. **Explain the pending authorization to you** \u2014 confirm that only one order exists, one item shipped, and the second charge is a pending authorization that should drop off within 3\u20135 business days.\n2. **Set a follow-up for 5 business days** \u2014 check that the pending charge has been removed from your statement.\n3. **Escalate to the payments team if the second charge settles** \u2014 per policy, if both charges settle, the payments team will handle it. No refund can be issued against a pending authorization.",
+    "trial": 2
+  },
+  {
+    "mode": "nonstream",
+    "effort": "low",
+    "max_completion_tokens": 8192,
+    "elapsed_s": 2.0682175420224667,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 764,
+      "prompt_tokens": 821,
+      "total_tokens": 1585,
+      "completion_tokens_details": {
+        "reasoning_tokens": 371
+      },
+      "prompt_tokens_details": {
+        "cached_tokens": 521
+      }
+    },
+    "completion_tokens": 764,
+    "effective_output_tokens_per_s": 369.4002127324094,
+    "text_chars": 1797,
+    "text": "**1. Most likely explanation**  \nThe second $129 charge is a **pending authorization**, not a final charge. It was created by a duplicate system reservation that was later released. Since your order shipped with one tracking number, only the first charge should ultimately settle. The pending amount typically disappears from your statement within 3\u20135 business days.\n\n**2. Three pieces of evidence**  \n- Payment record #2 shows status **\u201cpending\u201d** (authorization B2M09T), while record #1 is **\u201ccompleted\u201d**.  \n- The fulfillment log shows a second unit was reserved at 19:42:47 **with no order ID attached**, then **released back to stock** at 19:58:30.  \n- Support policy explicitly states: *\u201cA pending card authorization can appear on a customer statement as a second charge.\u201d*\n\n**3. Alternative explanations and what is uncertain**  \n- **Alternative A:** Both charges could settle if the pending authorization is captured by mistake. This would require escalation to the payments team.  \n- **Alternative B:** The pending charge might be from a different purchase you forgot about (though your order history shows only one order that day, and the card matches).  \n- **Uncertain:** We cannot yet know whether the pending authorization will drop off or be captured. That depends on the payment processor, which we don\u2019t control.\n\n**4. Next three actions (priority order)**  \n1. **Explain the pending authorization** to you, confirming that only one order exists and that the second charge is not final.  \n2. **Set a follow-up for 5 business days** to check whether the pending charge has disappeared. If it hasn\u2019t, we\u2019ll escalate.  \n3. **Do not issue a refund yet** \u2014 policy forbids refunding an unsettled authorization. If both charges settle, we will escalate to the payments team to resolve it.",
+    "trial": 3
+  },
+  {
+    "mode": "nonstream",
+    "effort": "low",
+    "max_completion_tokens": 8192,
+    "elapsed_s": 1.6022814167663455,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 470,
+      "prompt_tokens": 787,
+      "total_tokens": 1257,
+      "completion_tokens_details": {
+        "reasoning_tokens": 2
+      },
+      "prompt_tokens_details": {
+        "cached_tokens": 499
+      }
+    },
+    "completion_tokens": 470,
+    "effective_output_tokens_per_s": 293.3317425278098,
+    "text_chars": 2303,
+    "text": "## 1. Most likely explanation\n\nThe two charges are almost certainly the same order being processed twice: your order (ORD-1048) was charged successfully at 19:41, and about 90 seconds later a second, identical authorization appeared. The fulfillment log shows the second reservation had no order ID attached and was later released back to stock, which suggests it was a duplicate system action, not a second purchase by you.\n\n## 2. Evidence that supports this\n\n- Your order record shows only one order and one item (`quantity: 1`, `amount_usd: 129`), and only one order was placed on your account that day.\n- The first payment (19:41:11) is marked **completed**, while the second (19:42:45) is still **pending** \u2014 consistent with a duplicate authorization that has not settled.\n- The fulfillment log shows a second unit was reserved at 19:42:47 with no order ID, then released back to stock at 19:58:30, confirming the duplicate was not tied to a real order.\n\n## 3. Alternative explanations and what is still uncertain\n\n- **The second charge could be a separate, unauthorized purchase.** However, the card details match your order exactly, and the timing (90 seconds later) makes this unlikely. We have not confirmed whether the authorization was initiated from your account or your device.\n- **The second charge could settle and become permanent.** We do not yet know whether the pending authorization will be captured or released. The payment processor has not yet confirmed the authorization's expiry or final status.\n\n## 4. Next actions, in priority order\n\n1. **Explain the pending authorization to you** \u2014 confirm that one charge has settled for your order and the second is a duplicate pending authorization that normally disappears within 3\u20135 business days if not captured.\n2. **Set a follow-up for 3\u20135 business days** to check whether the second authorization has cleared or been released.\n3. **If both charges settle, escalate to the payments team** \u2014 per policy, we cannot refund a charge that has not settled, but once both settle, the payments team can review and issue a refund for the duplicate.\n\n**What we have not confirmed:** We have not yet verified with the payment processor whether the second authorization will be captured or released, and we have not issued a refund at this time.",
+    "trial": 4
+  },
+  {
+    "mode": "nonstream",
+    "effort": "high",
+    "max_completion_tokens": 8192,
+    "elapsed_s": 9.06844187527895,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 4168,
+      "prompt_tokens": 811,
+      "total_tokens": 4979,
+      "completion_tokens_details": {
+        "reasoning_tokens": 3756
+      },
+      "prompt_tokens_details": {
+        "cached_tokens": 1
+      }
+    },
+    "completion_tokens": 4168,
+    "effective_output_tokens_per_s": 459.61589182836224,
+    "text_chars": 1956,
+    "text": "**1. Most likely explanation**\n\nEvidence shows only one real order: ORD-1048, one pair of headphones, $129, one confirmation email, one tracking number, and one completed payment. The second $129 charge is pending, not completed. The fulfillment log also shows a second unit was reserved with no order ID, then released back to stock. I infer the second charge was a duplicate payment attempt that did not create an order. It is most likely a temporary pending authorization that will disappear from your card in 3\u20135 business days.\n\n**2. Three pieces of supporting evidence**\n\n- Payment records show the first $129 charge as completed and the second $129 charge as pending, on the same card.\n- The order record shows quantity 1, amount $129, status shipped, one tracking number, and only one order on the account that day.\n- The fulfillment log shows a second unit was reserved with no order ID at 19:42:47, then released back to stock at 19:58:30. Only one unit shipped against ORD-1048.\n\n**3. Alternative explanations and what is still uncertain**\n\n- The pending charge could settle, making it a real double charge. Your history shows a similar situation in October where both charges settled and one was refunded, so this cannot be ruled out.\n- The hold could remain visible longer than 3\u20135 business days, depending on your bank or the payment processor. The authorization expiry date is not in the case file.\n- What is still uncertain: whether the pending charge will be released or captured, and exactly when it will disappear.\n\n**4. Next actions for the agent**\n\n1. Explain to you what is confirmed and what is not confirmed, and note that a refund cannot be issued against a pending authorization.\n2. Set a follow-up for 3\u20135 business days to check whether the second charge has disappeared or settled.\n3. If both charges settle, escalate to the payments team. Also request the authorization expiry date from the payment processor for more certainty.",
+    "trial": 0
+  },
+  {
+    "mode": "nonstream",
+    "effort": "high",
+    "max_completion_tokens": 8192,
+    "elapsed_s": 4.853446209337562,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 2370,
+      "prompt_tokens": 804,
+      "total_tokens": 3174,
+      "completion_tokens_details": {
+        "reasoning_tokens": 1988
+      },
+      "prompt_tokens_details": {
+        "cached_tokens": 1
+      }
+    },
+    "completion_tokens": 2370,
+    "effective_output_tokens_per_s": 488.31281892860966,
+    "text_chars": 1911,
+    "text": "**Most likely explanation**  \nThe second $129 charge is a duplicate **pending authorization**, not a second order. You placed one order, one item was shipped, and one tracking number was issued. The first payment completed; the second is still pending and was never attached to an order. A pending authorization can appear on your card as a charge, and if it is not captured, it usually disappears within 3\u20135 business days.\n\n**Evidence supporting this**  \n- Payment records show the first $129 authorization completed and the second $129 authorization is still pending, both on the same card.  \n- The fulfillment log shows only one unit was reserved for order ORD-1048; the second reservation had no order ID and was later released back to stock.  \n- The order record shows quantity 1, amount $129, and only one order on the account that day.\n\n**Alternative explanations / what is still uncertain**  \n- The pending authorization could still be captured, which would make both charges settle. If that happens, the duplicate settled charge would need to be escalated to the payments team for refund.  \n- The second authorization could come from a separate transaction or payment-gateway retry that is not visible in this file. We do not yet know why the second authorization was created or whether it will expire.\n\n**Next actions, in priority order**  \n1. Tell the customer what is confirmed and what is not: one order, one shipment, one tracking number; the first charge settled, the second is pending; a refund cannot be issued against an unsettled authorization.  \n2. Set a follow-up for 3\u20135 business days to check whether the pending authorization disappears or settles. If it settles, escalate to the payments team for a refund of the duplicate settled charge.  \n3. Request the authorization expiry date from the payment processor to confirm how long the hold can remain and whether it can still be captured.",
+    "trial": 1
+  },
+  {
+    "mode": "nonstream",
+    "effort": "high",
+    "max_completion_tokens": 8192,
+    "elapsed_s": 8.1586180832237,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 2723,
+      "prompt_tokens": 782,
+      "total_tokens": 3505,
+      "completion_tokens_details": {
+        "reasoning_tokens": 2292
+      },
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "completion_tokens": 2723,
+    "effective_output_tokens_per_s": 333.75750307508764,
+    "text_chars": 2078,
+    "text": "1. Most likely explanation  \nThe second $129 charge is a duplicate pending authorization, not a second order. The case file shows one order, quantity 1, one tracking number, and one shipment. The first payment is completed; the second is still pending. The fulfillment log also shows a second unit was briefly reserved with no order ID and then released back to stock. Pending authorizations can appear as charges and usually disappear within 3\u20135 business days if they are never captured. So the most likely outcome is that the second charge drops off and you are only charged $129.\n\n2. Three pieces of supporting evidence  \n- Payment records show the first $129 charge completed at 19:41:11 and the second $129 charge pending at 19:42:45, both on card ending 4417.  \n- Fulfillment log shows 1 unit reserved at 19:42:47 with no order ID attached, then released back to stock at 19:58:30. Only 1 unit was shipped against ORD-1048.  \n- The order record shows ORD-1048 has quantity 1, amount $129, status shipped, one tracking number, and only one order on the account that day.\n\n3. Alternative explanations and what is still uncertain  \n- The second authorization could still be captured, meaning both charges would settle. In that case, policy says to escalate to the payments team. Your history shows a similar past issue where both charges settled and one was refunded.  \n- The second charge could be a system retry or duplicate authorization not tied to your order, but the case file does not confirm whether the payment processor will release it. We also do not have the authorization expiry date.\n\n4. Next three actions  \n1. Explain to the customer what is confirmed: one order, one shipment, one tracking number, and the second charge is pending. No refund can be issued against a pending authorization.  \n2. Set a follow-up for 5 business days to check whether the pending charge has disappeared or settled.  \n3. If both charges settle, escalate to the payments team. If the customer needs a specific date, request the authorization expiry date from the payment processor.",
+    "trial": 2
+  },
+  {
+    "mode": "nonstream",
+    "effort": "high",
+    "max_completion_tokens": 8192,
+    "elapsed_s": 4.101550500374287,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 1668,
+      "prompt_tokens": 815,
+      "total_tokens": 2483,
+      "completion_tokens_details": {
+        "reasoning_tokens": 1312
+      },
+      "prompt_tokens_details": {
+        "cached_tokens": 426
+      }
+    },
+    "completion_tokens": 1668,
+    "effective_output_tokens_per_s": 406.67547549342294,
+    "text_chars": 1715,
+    "text": "**1. Most likely explanation**  \nYou placed one order, and there is only one real charge for it. The second $129 charge is a **pending authorization** from a duplicate payment attempt. It is not a second order, and it has not been taken from your account. Pending authorizations like this usually disappear on their own within 3\u20135 business days.\n\n**2. Evidence supporting this**  \n- The payment records show one charge with status **completed** and a second charge with status **pending**.\n- The order record shows only one order, quantity 1, for $129, and one tracking number.\n- The fulfillment log shows only one unit was reserved for the order and later shipped. The second reservation had no order ID attached and was released back to stock.\n\n**3. Alternative explanations and what is still uncertain**  \n- The pending charge could still **settle**, which would mean you are actually charged twice. That is uncertain because we do not yet know whether the payment processor will capture it.\n- There could have been a system or checkout error that created a duplicate authorization, even though you only pressed buy once. The exact cause of the duplicate is not confirmed.\n- We also do not know the authorization\u2019s expiry date yet.\n\n**4. Next actions, in priority order**  \n1. **Explain to you** what we have confirmed: one completed charge and one pending authorization. No refund can be issued against a pending authorization that has not settled.\n2. **Set a follow-up** for 3\u20135 business days to check whether the pending charge disappears. If it settles, we will escalate to the payments team.\n3. **Request the authorization expiry date** from the payment processor so we can give you a more precise timeline.",
+    "trial": 3
+  },
+  {
+    "mode": "nonstream",
+    "effort": "high",
+    "max_completion_tokens": 8192,
+    "elapsed_s": 8.146007083822042,
+    "finish_reason": "stop",
+    "usage": {
+      "completion_tokens": 3299,
+      "prompt_tokens": 809,
+      "total_tokens": 4108,
+      "completion_tokens_details": {
+        "reasoning_tokens": 2830
+      },
+      "prompt_tokens_details": {
+        "cached_tokens": 423
+      }
+    },
+    "completion_tokens": 3299,
+    "effective_output_tokens_per_s": 404.983689070417,
+    "text_chars": 2300,
+    "text": "**1. Most likely explanation**  \nYour order ORD-1048 was charged once. The first $129 payment is the completed/settled charge for the headphones. The second $129 entry is a pending authorization created about a minute later during checkout. It was not linked to any order: a second unit was reserved without an order ID and then released back to stock. Pending authorizations can appear on a card as a second charge and usually disappear within 3\u20135 business days if they are never captured. So the second charge should drop off on its own.\n\n**2. Evidence supporting this**  \n- The order shows quantity 1, amount $129, and only one order on the account that day. The customer has one confirmation email and one tracking number.  \n- Payment records show the first $129 charge as completed and the second $129 charge as pending, with a different authorization code, on the same card, about 94 seconds later.  \n- The fulfillment log shows a second unit was reserved with no order ID attached, then released back to stock. Only one unit was shipped against ORD-1048.  \n- The support policy states that a pending authorization can appear as a second charge and usually disappears if never captured.\n\n**3. Alternative explanations and what is still uncertain**  \n- The second pending authorization could still settle. If that happens, it would be a true duplicate charge, and the payments team would need to be involved so one settled charge could be refunded. The customer had a similar issue on October 7, where both charges settled and one was refunded.  \n- The second authorization could be unrelated to this order, such as a processor error or another transaction, even though it matches the card, amount, and time. We do not yet have processor-level details or the authorization expiry date.\n\n**4. Next actions, in priority order**  \n1. Explain to the customer what is confirmed: one order, one completed charge, and one pending authorization not tied to an order. No refund can be issued against a pending authorization.  \n2. Set a follow-up for 5 business days to confirm the pending authorization disappears. If it remains or settles, escalate to the payments team.  \n3. Request the authorization expiry date from the payment processor so the customer can be given a precise expected drop-off date.",
+    "trial": 4
+  }
+]

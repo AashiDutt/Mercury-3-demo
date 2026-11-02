@@ -1,0 +1,67 @@
+{
+  "scenario": "Customer reports two charges for one order",
+  "system_prompt": "You are a customer-support escalation assistant.\nUse only the evidence in the supplied case file.\nSeparate what the evidence shows from what you infer.\nDo not state that a refund has been issued unless the case file says so.\nIf the evidence is insufficient to decide, say so explicitly.",
+  "task_prompt": "Analyze this customer-support case.\n\nReturn:\n1. The most likely explanation.\n2. Three pieces of evidence from the case file that support it.\n3. Two alternative explanations, and what is still uncertain.\n4. The next three actions for the agent, in priority order.\n\nKeep the answer concise. Write it so the customer could read it.",
+  "packet_label": "CASE FILE",
+  "customer_message": "I ordered one pair of headphones yesterday evening and my card now shows two charges of $129 each. I have one confirmation email and one tracking number. I only pressed buy once. Please refund the second charge today, I cannot afford to be out $258.",
+  "order": {
+    "order_id": "ORD-1048",
+    "placed_at": "2026-10-28T19:41:08Z",
+    "status": "shipped",
+    "shipped_at": "2026-10-29T08:12:00Z",
+    "item": "wireless headphones",
+    "quantity": 1,
+    "amount_usd": 129,
+    "orders_on_account_that_day": 1
+  },
+  "payment_records": [
+    {
+      "entry": 1,
+      "at": "2026-10-28T19:41:11Z",
+      "amount_usd": 129,
+      "status": "completed",
+      "authorization_code": "A7X41K",
+      "card_last_four": "4417"
+    },
+    {
+      "entry": 2,
+      "at": "2026-10-28T19:42:45Z",
+      "amount_usd": 129,
+      "status": "pending",
+      "authorization_code": "B2M09T",
+      "card_last_four": "4417"
+    }
+  ],
+  "fulfillment_log": [
+    "19:41:12 reserved 1 unit for ORD-1048",
+    "19:42:47 reserved 1 unit (no order id attached)",
+    "19:58:30 released 1 unreserved unit back to stock",
+    "08:12:00 shipped 1 unit against ORD-1048, one tracking number issued"
+  ],
+  "customer_history": [
+    {
+      "date": "2026-10-07",
+      "contact_reason": "reported two charges for one order",
+      "outcome": "both charges settled; agent issued a refund for one of them"
+    },
+    {
+      "date": "2026-06-19",
+      "contact_reason": "delivery address change",
+      "outcome": "resolved, no payment involved"
+    }
+  ],
+  "support_policy": [
+    "A pending card authorization can appear on a customer statement as a second charge.",
+    "A pending authorization that is never captured usually disappears within 3-5 business days.",
+    "Escalate to the payments team if both charges settle.",
+    "Agents may not issue a refund against an authorization that has not settled.",
+    "Tell the customer what you have confirmed and what you have not."
+  ],
+  "available_agent_actions": [
+    "explain the pending authorization to the customer",
+    "set a follow-up for a named number of business days",
+    "escalate to the payments team",
+    "issue a refund for a settled charge",
+    "request the authorization expiry date from the payment processor"
+  ]
+}
